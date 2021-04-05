@@ -1,0 +1,125 @@
+header {
+    background-color: #082A47;
+    height: 40px;
+}
+
+.header, .div_navbar, .div_main{
+    width: 1140px;
+}
+
+a {
+    text-decoration:none;
+}
+
+.span_header-menu a:hover {
+    text-decoration:underline ;
+}
+
+header span {
+        color: #CCCCCC;
+        font-size: 12px;
+        line-height: 40px;
+}
+
+.span_header-menu a {
+    color: #CCCCCC;
+}
+
+.span_header-menu {
+    float: right;
+    margin-left: 10px;
+}
+.navbar-brand img{
+    height: 50px;
+}
+.navbar-collapse{
+    float: right;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.dropdown:hover {
+    background-color: #e9ecef;
+}
+
+nav {
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%);
+    margin-bottom: 20px;
+}
+
+.board_small {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar{
+    border: 1px solid;
+    border-color: #CCCCCC;
+    padding: 15px;
+}
+
+.sidebar h3 {
+    border-bottom: solid 2px;
+    border-color:#3498db;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+#form_login_sidebar a {
+    color: black;
+    font-size: 13px;
+}
+
+#form_login_sidebar a:hover {
+    text-decoration:underline ;
+}
+
+#form_login_sidebar {
+    margin-bottom: 30px
+}
+
+ul {
+    list-style:none;
+    padding-left:0px;
+}
+
+.sidebar {
+    width: 244.5px;
+}
+
+.board_small * {
+    font-size: 13px;
+    color: black;
+}
+
+.board_small_title{
+    display: flex;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #000;
+    text-align: left;
+    border-bottom: 2px solid #000;
+}
+
+.board_small_list td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd
+}
+
+table {
+    width: 100%;
+}
+
+.card {
+    border: none;
+}
+
+
+
+
+
