@@ -3,7 +3,7 @@ header {
     height: 40px;
 }
 
-.header, .div_navbar, .div_main{
+.header, .div_navbar, .div_main, .div_board, .div_postWrite{
     width: 1140px;
 }
 
@@ -118,6 +118,55 @@ table {
 .card {
     border: none;
 }
+
+/* board_view.php css */
+.board, .postWrite{
+    width:847.5px;
+}
+
+.board h3, .postWrite h3{
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    line-height: inherit;
+    color: #333;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.board .form-control{
+    width: auto;
+}
+
+.table_board th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+}
+
+.table_board td, .table_board th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+.board .table_board {
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.button_write {
+    font-size: 13px;
+    margin: 20px;
+}
+
+.div_write ul {
+    display: flex;
+}
+
 
 
 
