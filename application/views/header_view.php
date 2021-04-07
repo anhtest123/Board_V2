@@ -10,7 +10,7 @@
         <!-- fontawesome -->
         <script src="https://kit.fontawesome.com/afc36b5dc6.js" crossorigin="anonymous"></script>
         <!-- css -->
-        <link rel="stylesheet" type="text/css" href="/css/main.css?ver=13">
+        <link rel="stylesheet" type="text/css" href="/css/main.css?ver=22">
         <!-- jquery -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     </head>
@@ -19,18 +19,34 @@
         
         <header>
             <div class="container header">
+                <div class="row"> 
+                    <div class="col">
+                        <span class="span_header-title mr-auto">코드이그나이터 기반 PHP 게시판: anhboard</span>
+                    </div>
+                    <div class="col justify-content-end">
+                        <?php if($this->session->userdata('logged_in')) { ?>
+                            <span class="span_header-menu">
+                                <i class="fa fa-user"></i>
+                                <a href="#">마이페이지</a>
+                            </span>
 
-                <span class="span_header-title mr-auto">코드이그나이터 기반 PHP 게시판: anhboard</span>
-                
-                <span class="span_header-menu">
-                        <i class="fas fa-sign-in-alt"></i>
-                        <a href="/Login">회원가입</a>
-                </span>
+                            <span class="span_header-menu">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <a href="/Login/logout">로그아웃</a>
+                            </span>
+                        <?php } else { ?>
+                            <span class="span_header-menu">
+                                <i class="fa fa-user"></i>
+                                <a href="/Login">로그인</a>
+                            </span>
 
-                <span class="span_header-menu">
-                        <i class="fa fa-user"></i>
-                        <a href="/register">로그인</a>
-                </span>
+                            <span class="span_header-menu">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                    <a href="/Signup">회원가입</a>
+                            </span>
+                        <?php } ?>
+                    </div>
+                </div>
             <div>
         </header>
         <!-- hearder_view END -->

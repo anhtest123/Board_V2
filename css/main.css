@@ -3,11 +3,12 @@ header {
     height: 40px;
 }
 
-.header, .div_navbar, .div_main, .div_board, .div_postWrite{
+.header, .div_navbar, .div_main, .div_board, .div_postWrite {
     width: 1140px;
 }
 
-a {
+
+nav a:hover {
     text-decoration:none;
 }
 
@@ -25,15 +26,8 @@ header span {
     color: #CCCCCC;
 }
 
-.span_header-menu {
-    float: right;
-    margin-left: 10px;
-}
 .navbar-brand img{
     height: 50px;
-}
-.navbar-collapse{
-    float: right;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -119,12 +113,13 @@ table {
     border: none;
 }
 
-/* board_view.php css */
-.board, .postWrite{
+/* board_view.php */
+
+.board, .postWrite, .postView{
     width:847.5px;
 }
 
-.board h3, .postWrite h3{
+.board h3, .postWrite h3, .postView h3{
     font-size: 18px;
     display: block;
     width: 100%;
@@ -150,6 +145,7 @@ table {
     line-height: 1.42857143;
     vertical-align: top;
     border-top: 1px solid #ddd;
+    font-size: 13px;
 }
 
 .board .table_board {
@@ -165,6 +161,91 @@ table {
 
 .div_write ul {
     display: flex;
+}
+
+/* signup_view */
+
+.div_signup {
+    width: 870px;
+}
+
+.div_signup .card{
+    border: 1px solid #ddd;
+}
+.div_signup form select {
+    width: auto;
+}
+
+.card-footer div {
+    display: flex;
+}
+
+/* header_view */
+
+.span_header-menu {
+    margin-left: 10px;
+}
+
+.header .row div:last-child {
+    display: flex;
+}
+
+/* postView */
+
+.div_postInfo label {
+    font-size: 13px;
+    padding-right: 20px;
+}
+
+.div_postInfo label:last-child {
+    font-size: 12px;
+}
+
+.div_postInfo div:last-child{
+    display: flex;
+}
+
+.postView .content {
+    padding: 20px;
+}
+
+.div_thumb a{
+    background-color: #ddd;
+    border-radius:75px;
+    text-align:center;
+    vertical-align:middle;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.div_thumb a:hover{
+    background-color: #0d6efd;
+    text-decoration:none;
+}
+
+.div_thumb a:hover {
+    text-decoration:none;
+    color : #fff;
+}
+
+.div_portView_button {
+    padding: 20px;
+}
+
+.div_portView_button a {
+    font-size: 13px;
+}
+
+/* common */
+
+.container-flex {
+    display: flex;
+}
+
+a {
+    text-decoration:none;
+    color :black;
 }
 
 

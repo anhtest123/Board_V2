@@ -1,5 +1,4 @@
-<div>
-    <div class="div_board container">
+    <!-- <div class="div_board container"> -->
         <div class="row">
             <!-- board -->
             <div class="col">
@@ -36,8 +35,8 @@
                         <tbody>
                             <?php foreach ($posts as $key => $value): ?>
                             <tr>
-                                <td><?php echo $value['id'] ?></td>
-                                <td><a href="#"><?php echo $value['subject'] ?></a></td>
+                                <td><?php echo $value['postID'] ?></td>
+                                <td><a href="/Main/postView/<?php echo array_search($value['boardName'],BOARD_LIST)?>/<?php echo $value['postID'] ?>"><?php echo $value['subject'] ?></a></td>
                                 <td><?php echo $value['writer'] ?></td>
                                 <td><?php echo date('y-m-d', strtotime($value['date'])) ?></td>
                                 <td><?php echo $value['hit'] ?></td>
@@ -47,7 +46,7 @@
                     </table>
 
                     <!-- 글쓰기 버튼 -->
-                    <div class="container div_write">
+                    <div class="div_write">
                         <ul class="justify-content-end">
                             <a class="button_write btn btn-success" href="/Main/postWrite">글쓰기</a>
                         </ul>
@@ -76,7 +75,8 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+                <!-- side-bar-start -->
+            
             
             <!-- board_veiw javascript -->
             <script>
@@ -110,7 +110,7 @@
                                 var result='', tag;
                                 for(var i=0;data.length>i;i++)
                                 {
-                                    tag ='<tr><td>'+data[i].id+'</td><td><a href="#">'+data[i].subject+'</a></td><td>'+data[i].writer+'</td><td>'+to_date2(data[i].date)+'</td><td>'+data[i].hit+'</td></tr>';
+                                    tag ='<tr><td>'+data[i].postID+'</td><td><a href="/Main/postView/<?php echo array_search($value['boardName'],BOARD_LIST)?>/'+data[i].postID+'">'+data[i].subject+'</a></td><td>'+data[i].writer+'</td><td>'+to_date2(data[i].date)+'</td><td>'+data[i].hit+'</td></tr>';
                                     result += tag;
                                 }
                                 $('.table_board tbody').html(result);

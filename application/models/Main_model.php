@@ -8,13 +8,11 @@ class Main_model extends CI_Model {
     } 
 
     // offset부터 count 까지 board_name의 게시글 불러오기
-    public function Load_posts($count, $offset, $board_name)
+    public function Load_posts($count, $offset, $boardName=0)
     {
+        $this->db->order_by('postID', 'DESC'); // id 필드 내림차순
         
-        
-        $this->db->order_by('id', 'DESC'); // id 필드 내림차순
-        
-        if($board_name === 0 )
+        if($boardName === 0 )
         {   
             // 모든 board_name 조회
             $query = $this->db->get('board_posts',$count, $offset);
@@ -22,7 +20,7 @@ class Main_model extends CI_Model {
         else
         {
             // 원하는 board_name만 조회
-            $where = array('board_name'=>$board_name);
+            $where = array('boardName'=>$boardName);
             $query = $this->db->get_where('board_posts',$where, $count, $offset); // $offset 부터 count 까지
         }
 
@@ -30,6 +28,16 @@ class Main_model extends CI_Model {
     
         return $result;
     }
-    
-    
+
+    // postID에 해당하는 게시글 불러오기
+    public function post_view($postID) 
+    {
+        $where = array('postID' => $postID);
+
+        $query = $this->db->get_where('board_posts', $where);
+
+        $result = $query->row_array(); 
+
+        return $result;
+    }
 }

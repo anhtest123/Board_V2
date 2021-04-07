@@ -1,7 +1,6 @@
-<div>
-    <div class="div_postWrite container">
+    <!-- <div class="div_postWrite container"> -->
         <div class="row">
-            <!-- Main -->
+            <!-- postWirte -->
             <div class="col">
                 <div class="postWrite">
                     <h3>test</h3>
@@ -18,4 +17,4 @@
         
                         <button class="btn btn-success" type="submit">게시글 등록</button>
                 </form>
-            </div>
+                <!-- side-bar-start -->

@@ -1,5 +1,4 @@
-<div>
-    <div class="div_main container">
+    <!-- <div class="div_main container"> -->
         <div class="row">
             <!-- Main -->
             <div class="col">
@@ -9,10 +8,10 @@
                     <?php for($j=0;$j<8;$j++) { ?>
                     <div class="col-6 board_small">
                             <div class="board_small_title">
-                                <?php echo $board_name[$j] ?>
+                                <?php echo BOARD_LIST[$j] ?>
 
                                 <div class="pull_right ms-auto">
-                                    <a href="#">더보기 > </a>
+                                    <a href="/Main/postsList/<?php echo array_search(BOARD_LIST[$j],BOARD_LIST)?>">더보기 > </a>
                                 </div>  
                             </div>
 
@@ -25,11 +24,11 @@
 
                                     <tbody>
                                         <?php for($i=0;$i<4;$i++) { 
-                                            if(count(${"$board_name[$j]"})>$i) {    
+                                            if(count(${BOARD_LIST[$j]})>$i) {    
                                         ?>
                                             <tr>
-                                                <td><a href="#"><?php echo ${"$board_name[$j]"}[$i]['subject'] ?></a></td>
-                                                <td><?php echo date('m-d', strtotime(${"$board_name[$j]"}[$i]['date'])) ?></td>
+                                                <td><a href="/Main/postView/<?php echo array_search(BOARD_LIST[$j],BOARD_LIST)?>/<?php echo ${BOARD_LIST[$j]}[$i]['postID'] ?>"><?php echo ${BOARD_LIST[$j]}[$i]['subject'] ?></a></td>
+                                                <td><?php echo date('m-d', strtotime(${BOARD_LIST[$j]}[$i]['date'])) ?></td>
                                             </tr>
                                         <?php } else {?>
                                             <tr>
@@ -43,5 +42,4 @@
                     </div>
                     <?php } ?>
                 </div>
-            </div>
-            <!-- side-bar-start -->
+                <!-- side-bar-start -->
